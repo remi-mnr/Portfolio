@@ -25,6 +25,7 @@ export default function Hello() {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Mon portfolio et mes projets de développement" />
                 {/* <meta name="theme-color" content={color}/> */}
+                <meta name="robots" content="noindex"/>
             </Head>
 
             <main>
