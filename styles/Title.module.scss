@@ -1,0 +1,451 @@
+.slide {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        font-family: "Source Sans Pro";
+        font-weight: 800;
+        font-size: 130px;
+        color: #2E2E2E;
+        margin-bottom: 11px;
+        @media(max-width: "1500px") {
+            font-size: 110px;
+            margin-bottom: 5px;
+        }
+        @media(max-width: "1000px") {
+            font-size: 89px;
+        }
+        @media(max-width: "600px") {
+            font-size: 65px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .infos {
+        position: absolute;
+        top: 40%;
+        right: 13%;
+        width: 520px;
+        @media(max-width: "1500px") {
+            width: 438px;
+        }
+        @media(max-width: "1200px") {
+            top: 38%;    top: 38%;
+            right: 10%;
+        }
+        @media(max-width: "1000px") {
+            width: 355px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        @media(max-width: "600px") {
+            // left: 0;
+            // right: 0;
+            // margin: auto;
+            // width: 440px;
+            width: 257px; 
+        }
+    }
+
+    .thumbs {
+        color: #E4E4E4;
+        width: 30px;
+        @media(max-width: "1000px") {
+            width: 24px;
+        }
+    }
+
+    .nameContainer {
+        display: flex;
+        position: absolute;
+        margin: -31px 0 0 -28px;
+        @media(max-width: "1500px") {
+            margin: -24px 0 0 -32px;
+        }
+        @media(max-width: "1000px") {
+            margin: -24px 0 0 -23px;
+        }
+    }
+
+    .name {
+        font-family: Source Sans Pro;
+        font-size: 43px;
+        font-weight: 400;
+        color: #2E2E2E;
+        margin-left: 13px;
+        @media(max-width: "1500px") {
+            font-size: 38px;
+        }
+        @media(max-width: "1000px") {
+            margin-left: 9px;
+            font-size: 28px;
+        }
+    }
+
+    .subtitle {
+        font-family: Lato;
+        font-size: 27px;
+        line-height: 37px;
+        font-weight: 400;
+        padding-left: 9px;
+        color: #cecece;
+        @media(max-width: "1500px") {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        @media(max-width: "1000px") {
+            font-size: 19px;
+            line-height: 28px;
+        }
+        @media(max-width: "600px") {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @mixin grid {
+        width: 500px;
+        color: #f3f3f3;
+        position: absolute;
+        height: auto;
+        word-break: break-all;
+        font-family: Source Sans Pro;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 56px;
+        letter-spacing: 28px;
+    }
+    @mixin gridv2 {
+        width: 500px;
+        color: #f3f3f3;
+        position: absolute;
+        height: auto;
+        word-break: break-all;
+        font-family: Source Sans Pro;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 56px;
+        letter-spacing: 33px;
+
+        @media(max-width: "1600px") {
+            width: 450px;
+            font-size: 40px;
+            line-height: 50px;
+            letter-spacing: 32px;
+        }
+    }
+
+    .grid {
+        left: 266px;
+        @media(max-width: "1600px") {
+            left: 197px;
+        }
+        @media(max-width: "1200px") {
+            left: 72px;
+        }
+        @media(max-width: "1000px") {
+            left: 24px;
+            top: -346px;
+        }
+        @include gridv2
+    }
+
+    .grid2 {
+        right: 70px;
+        // right: 266px;
+        bottom: 20px;
+        @include gridv2;
+        @media(max-width: "1600px") {
+            right: 125px;
+        }
+        @media(max-width: "1000px") {
+            right: 0px;
+            width: 338px;
+        }
+    }
+
+    @mixin blueCircle( $direction ) {
+        position: absolute;
+        border-radius: 100%;
+        background-image: linear-gradient($direction, #30B4FF, #0167FF);
+    }
+    @mixin yellowCircle( $direction ) {
+        position: absolute;
+        border-radius: 100%;
+        background-image: linear-gradient($direction, #FFCC01, #F89221);
+    }
+
+    .gradientBlock {
+        top: 64px;
+        left: -700px;
+        width: 1200px;
+        height: 1200px;
+        @include blueCircle(to top);
+        animation: floatAnimation 6s ease-in-out infinite -1.5s;
+
+        @media(max-width: "1600px") {
+            top: 80px;
+            left: -621px;
+            width: 1000px;
+            height: 1000px;
+        }
+        @media(max-width: "1200px") {
+            left: -695px;
+        }
+        // @media(max-width: "1000px") {
+        //     bottom: -851px;
+        //     left: -361px;
+        //     width: 1100px;
+        //     height: 1100px;
+        //     top: unset;
+        // }
+        @media(max-width: "1000px") {
+            bottom: -954px;
+            left: -445px;
+            width: 1100px;
+            height: 1100px;
+            top: unset;
+        }
+        @media(max-width: "500px") {
+            bottom: -452px;
+            // left: -158px;
+            right: 6px;
+            width: 590px;
+            height: 590px;
+            left: unset;
+        }
+
+
+        @media(max-height: "400px") {
+            bottom: -727px;
+            left: -311px;
+            width: 800px;
+            height: 800px;
+        }
+    }
+
+    .gradientBlock2 {
+        top: 100px;
+        left: 130px;
+        width: 450px;
+        height: 450px;
+        @include blueCircle(to bottom);
+        animation: floatAnimation 6s ease-in-out infinite;
+        display: flex;
+        justify-content: center;
+        svg {
+            color: white;
+            width: 160px;
+        }
+        
+        @media(max-width: "1600px") {
+            left: 69px;
+            width: 370px;
+            height: 370px;
+
+            svg {
+                width: 125px;
+            }
+        }
+        @media(max-width: "1200px") {
+            left: 55px;
+            width: 300px;
+            height: 300px;
+
+            svg {
+                width: 110px;
+            }
+        }
+        @media(max-width: "1000px") {
+            top: unset;
+            bottom: 24px;
+            left: 312px;
+            width: 130px;
+            height: 130px;
+
+            svg {
+                width: 55px;
+            }
+        }
+        @media(max-width: "500px") {
+            bottom: 35px;
+            // left: 301px;
+            right: 63px;
+            left: unset;
+            width: 100px;
+            height: 100px;
+            svg {
+                width: 43px;
+            }
+        }
+
+        @media(max-height: "400px") {
+            display: none;
+        }
+    }
+
+    .gradientBlock3 {
+        top: -250px;
+        right: -160px;
+        width: 500px;
+        height: 500px;
+        @include yellowCircle(to top);
+        animation: floatAnimation 6s ease-in-out infinite -0.5s;
+        @media(max-width: "1200px") {
+            top: -314px;
+            right: -127px;
+        }
+        @media(max-width: "1000px") {
+            top: -334px;
+            right: -160px;
+        }
+        @media(max-width: "500px") {
+            top: -348px;
+            right: -198px;
+            width: 500px;
+            height: 500px;
+        }
+        @media(max-height: "400px") {
+            top: -363px;
+            right: -169px;
+        }
+    }
+
+    .gradientBlock4 {
+        top: 64px;
+        right: 150px;
+        width: 250px;
+        height: 250px;
+        @include yellowCircle(to bottom);
+        animation: floatAnimation 6s ease-in-out infinite -2s;
+        display: flex;
+        justify-content: center;
+        svg {
+            color: white;
+            width: 115px;
+        }
+
+        @media(max-width: "1600px") {
+            width: 220px;
+            height: 220px;
+            svg {
+                width: 100px;
+            }
+        }
+        @media(max-width: "1200px") {
+            width: 160px;
+            height: 160px;
+            top: 48px;
+            right: 171px;
+            svg {
+                width: 70px;
+            }
+        }
+        @media(max-width: "1000px") {
+            width: 170px;
+            height: 170px;
+            top: 43px;
+            right: 102px;
+            svg {
+                width: 75px;
+            }
+        }
+        @media(max-width: "500px") {
+            width: 130px;
+            height: 130px;
+            right: 128px;
+            top: 43px;
+            svg {
+                width: 60px;
+            }
+        }
+
+        @media(max-height: "400px") {
+            display: none;
+        }
+    }
+
+    @keyframes floatAnimation {
+        0% { transform: translatey(0px); }
+        50% { transform: translatey(-30px); }
+        100% { transform: translatey(0px); }
+    }
+    @media(max-width: "700px") {
+        @keyframes floatAnimation {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-15px); }
+            100% { transform: translatey(0px); }
+        }
+    }
+
+
+
+    .buttonsContainer {
+        margin-top: 32px;
+        display: flex;
+        justify-content: flex-end;
+        @media(max-width: "1000px") {
+            margin-top: 18px;
+        }
+        @media(max-width: "600px") {
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 11px;
+        border: 1px #E4E4E4 solid;
+        color: #C4C4C4;
+        background-color: white;
+        box-shadow: 0 1px 4px #0000001a;
+        transition: all .1s ease-in-out;
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+        p {
+            font-family: Source Sans Pro;
+            font-weight: 900;
+            font-size: 28px;
+            margin-top: 9px;
+            // margin-right: 1px;
+        }
+        svg {
+            width: 32px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+        
+        @media(max-width: "1000px") {
+            width: 45px;
+            height: 45px;
+            svg {
+                width: 29px;
+            }
+            p {
+                font-size: 26px;
+                margin-top: 8px;
+            }
+        }
+        @media(max-width: "600px") {
+            width: 40px;
+            height: 40px;
+            svg {
+                width: 23px;
+            }
+            p {
+                font-size: 22px;
+                margin-top: 7px;
+            }
+        }
+    }
+}

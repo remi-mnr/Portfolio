@@ -14,3 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.float-effect {
+  animation: float 4.5s ease-in-out infinite;
+  filter: drop-shadow(2px 8px 13px black);
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

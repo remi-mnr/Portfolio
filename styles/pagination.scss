@@ -1,0 +1,71 @@
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 8px 0;
+    transition: all .1s ease-in-out;
+}
+
+.swiper-pagination-bullet{
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+.swiper-container-vertical > .swiper-pagination-bullets {
+    right: 60px;
+    @media(max-width: "1600px") {
+        right: 40px;
+    }
+    @media(max-width: "800px") {
+        right: 20px;
+    }
+}
+
+$black: #00000040;
+$blue: #0094FF;
+
+@mixin paginationBar {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 123px;
+    background-color: $black;
+    z-index: 9;
+    right: 60px;
+    @media(max-width: "1600px") {
+        right: 40px;
+    }
+    @media(max-height: "600px") {
+        height: 90px;
+    }
+    @media(max-width: "1000px") {
+        height: 90px;
+    }
+    @media(max-width: "800px") {
+        right: 20px;
+    }
+
+    @media(max-height: "400px") {
+        height: 70px;
+    }
+}
+
+.swiper-container-vertical::before {
+    @include paginationBar;
+    top: 73%;
+}
+
+.swiper-container-vertical::after {
+    @include paginationBar;
+    bottom: 73%;
+}
+
+.swiper-pagination-bullet {
+    // width: 9px;
+    // height: 9px;
+    background: $black;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: $blue;
+}
