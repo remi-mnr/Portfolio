@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide  } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper';
-import Image from 'next/image'
+// import Image from 'next/image'
 import Head from 'next/head'
 import styles from '../../styles/Hello.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -45,14 +45,14 @@ export default function Hello() {
                         <h1 className="swiper-no-swiping">Portfolio</h1>
                         <FontAwesomeIcon icon={faCoffee} />
                         <div className={styles.image}>
-                            <Image
+                            {/* <Image
                             alt="Kadijak" 
                             src="/kadijak.png"
                             layout="fill"
                             objectFit="contain"
                             // quality={100}
                             // className="float-effect"
-                            />
+                            /> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide><a href='#'>JUL !!!!</a>Slide 2</SwiperSlide>
