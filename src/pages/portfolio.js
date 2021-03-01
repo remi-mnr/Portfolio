@@ -2,7 +2,9 @@ import { Swiper, SwiperSlide  } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper';
 import Head from 'next/head'
 import styles from "../../styles/Hello.module.scss"
+
 import Title from "../components/title"
+import Webdoc from "../components/webdoc"
 // import { useState, useEffect } from 'react';
 
 
@@ -44,7 +46,7 @@ export default function Hello() {
                 // simulateTouch={false}
                 className={styles.swiper}
                 >
-                    {[ <Title />,<Title />,<Title />,<Title />,<Title /> ].map((component, index) => 
+                    {[ <Webdoc />, <Title />,<Webdoc />,<Title />,<Title />,<Title /> ].map((component, index) => 
                         <SwiperSlide key={index}>
                             {component}
                         </SwiperSlide>
