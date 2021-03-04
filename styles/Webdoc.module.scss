@@ -4,21 +4,23 @@ $mobile : 600px;
 
 .slide {
     background-color: white;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: relative;
     overflow: hidden;
 
     .infos {
         position: absolute;
-        // top: 19%;
-        top: 0;
         right: 17%;
-        bottom: 0;
-        margin: auto;
-        height: fit-content;
+        // top: 0;
+        // bottom: 0;
+        // margin: auto;
+        // height: fit-content;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        height: 100%;
 
-        // width: 540px;
         width: 28%;
         img {
             width: 100%;
