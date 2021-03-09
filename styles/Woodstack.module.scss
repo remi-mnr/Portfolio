@@ -231,6 +231,9 @@ $mobile : 600px;
         margin: auto;
         width: 1500px;
         height: 1500px;
+
+        background-image: url("/static/images/foret.jpg");
+        background-size: cover;
         
 
         @media (max-width: $medium) {
@@ -263,6 +266,9 @@ $mobile : 600px;
         height: 500px;
         border-radius: 100%;
         background-color: #FA306E;
+
+        background-image: url("/static/images/foret.jpg");
+        background-size: cover;
 
         @media (max-width: $medium) {
             // clip-path: circle(44% at 120% 16%);
@@ -308,7 +314,8 @@ $mobile : 600px;
             padding: 7px 9px;
             border-radius: 6px;
             // background-image: linear-gradient(to bottom, #30B4FF, #0167FF);
-            background-color: #FA306E;
+            // background-color: #FA306E;
+            background-color: #0f9d58;
         }
         @media (max-width: $medium) {
             p {

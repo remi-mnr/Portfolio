@@ -1,16 +1,17 @@
 // import '../../styles/globals.css'
 
-import 'swiper/swiper.min.css';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-import 'swiper/components/scrollbar/scrollbar.scss';
+import '../../styles/global.scss'
+
+// import 'swiper/swiper.min.css';
+// import 'swiper/components/navigation/navigation.scss';
+// import 'swiper/components/pagination/pagination.scss';
+// import 'swiper/components/scrollbar/scrollbar.scss';
 
 
 // import "@fontsource/open-sans"
 // import "@fontsource/source-sans-pro/700.css"
-import '../../styles/global.scss'
 // import '~sal.js/src/sal.scss';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 
 // import 'swiper/swiper.less';
 // import 'swiper/components/navigation/navigation.less';
@@ -20,13 +21,15 @@ import '../../styles/global.scss'
 import sal from 'sal.js';
 
 function MyApp({ Component, pageProps }) {
-	// useEffect(() => {
+	useEffect(() => {
 		// console.log(window.innerHeight)
-	// })
 
-	sal({
-        once: false
-    });
+		
+		sal({
+			once: false
+		});
+	}, [])
+
 
 	return <Component {...pageProps} />
 }

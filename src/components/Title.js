@@ -30,7 +30,7 @@ export default function Title() {
                     icon={faThumbsUp} 
                     className={styles.thumbs} 
                     data-sal="slide-up" 
-                    data-sal-delay="1000" data-sal-once/>
+                    data-sal-delay="1000" />
 
                     <p data-sal="slide-up" data-sal-delay="500"
                     className="swiper-no-swiping"
