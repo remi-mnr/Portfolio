@@ -9,18 +9,24 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 // import "@fontsource/open-sans"
 // import "@fontsource/source-sans-pro/700.css"
 import '../../styles/global.scss'
+// import '~sal.js/src/sal.scss';
 // import { useEffect } from 'react';
 
 // import 'swiper/swiper.less';
 // import 'swiper/components/navigation/navigation.less';
 // import 'swiper/components/pagination/pagination.less';
 // import 'swiper/components/scrollbar/scrollbar.less';
-
+// import 'sal.js'
+import sal from 'sal.js';
 
 function MyApp({ Component, pageProps }) {
 	// useEffect(() => {
 		// console.log(window.innerHeight)
 	// })
+
+	sal({
+        once: false
+    });
 
 	return <Component {...pageProps} />
 }

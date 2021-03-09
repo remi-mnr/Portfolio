@@ -1,5 +1,4 @@
 import styles from "../../styles/Title.module.scss"
-import sal from 'sal.js'
 import clsx from 'clsx';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,7 +6,6 @@ import { faThumbsUp, faCode, faPaintBrush, faDownload } from '@fortawesome/free-
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default function Title() {
-    sal();
     return (
         <div className={styles.slide}>
             

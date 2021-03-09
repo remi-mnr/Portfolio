@@ -1,16 +1,12 @@
 import styles from "../../styles/Webdoc.module.scss"
-import sal from 'sal.js'
 import clsx from 'clsx';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faCalendarDay, faClock, faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 
 export default function Webdoc() {
-    sal();
     return (
         <div className={styles.slide}>
-
-            <div className={styles.gradientBlock}/>
 
             <img className={styles.smallRound} src="/static/images/ski2.jpg" alt=""/>
             <img className={styles.bigRound} src="/static/images/ski2.jpg" alt=""/>

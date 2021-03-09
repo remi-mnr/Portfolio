@@ -6,20 +6,52 @@ import styles from "../../styles/Hello.module.scss"
 import Title from "../components/Title"
 import Webdoc from "../components/Webdoc"
 import Woodstack from "../components/Woodstack"
-// import { useState, useEffect } from 'react';
+
+
+// import sal from 'sal.js'
+
+import { useState, useEffect } from 'react';
 
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Mousewheel, A11y]);
 export default function Hello() {
-    // const [color, setColor] = useState("#111111")
-
+    const [color, setColor] = useState("#2d2d2d")
+    const colorList = [
+        "#fcb70c",
+        "#fa306e",
+        "#1486ff"
+    ]
+    const updateColor = (swiper) => {
+        console.log(swiper.activeIndex)
+        setColor(colorList[swiper.activeIndex])
+    }
+    
     // useEffect(() => {
+    //     const swiper = document.querySelector('.swiper-container').swiper;
+    //     console.log(swiper.realIndex)
+        // swiper.slideNext();
     //     const interval = setInterval(() => {
     //       setColor("#"+Math.floor(1000 + Math.random() * 900000))
     //     }, 1000);
     //     return () => clearInterval(interval);
+
+        // let vh = window.innerHeight * 0.01;
+        // document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        // window.addEventListener('resize', () => {
+        //     console.log("Resize")
+        //     let vh = window.innerHeight * 0.01;
+        //     console.log(vh)
+        //     document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // })
     // }, []);
 
+    // console.log(swiper.activeIndex)
+
+    // sal({
+    //     // threshold: 1,
+    //     once: true
+    // });
     return (
         <div className={styles.container}>
             <Head>
@@ -27,7 +59,7 @@ export default function Hello() {
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Mon portfolio et mes projets de développement" />
-                {/* <meta name="theme-color" content={color}/> */}
+                <meta name="theme-color" content={color}/>
                 <meta name="robots" content="noindex"/>
             </Head>
 
@@ -41,20 +73,29 @@ export default function Hello() {
                 pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                onSlideChange={(swiper) => updateColor(swiper)}
                 centeredSlides
                 // grabCursor
                 // simulateTouch={false}
                 className={styles.swiper}
                 >
-                    {[ <Title />,<Woodstack />,<Webdoc />].map((component, index) => 
+
+                    {/* {[ <Title />,<Woodstack />,<Webdoc />].map((component, index) => 
                         <SwiperSlide key={index}>
                             {component}
                         </SwiperSlide>
-                    )}
-                    {/* <SwiperSlide>
+                    )} */}
+
+                    
+                    <SwiperSlide>
                         <Title />
-                    </SwiperSlide> */}
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Woodstack />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Webdoc />
+                    </SwiperSlide>
                 </Swiper>
             </main>
         </div>
