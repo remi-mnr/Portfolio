@@ -21,14 +21,14 @@ import { useEffect } from 'react';
 import sal from 'sal.js';
 
 function MyApp({ Component, pageProps }) {
-	useEffect(() => {
+	// useEffect(() => {
 		// console.log(window.innerHeight)
 
 		
-		sal({
-			once: false
-		});
-	}, [])
+	// 	sal({
+	// 		once: false
+	// 	});
+	// }, [])
 
 
 	return <Component {...pageProps} />

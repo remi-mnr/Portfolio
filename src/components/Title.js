@@ -5,7 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faCode, faPaintBrush, faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
+import sal from 'sal.js'
+import { useEffect } from 'react';
+
 export default function Title() {
+    useEffect(() => {
+        sal();
+    }, []);
+
     return (
         <div className={styles.slide}>
             

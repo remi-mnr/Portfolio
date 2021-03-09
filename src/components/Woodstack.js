@@ -5,7 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faCalendarDay, faClock, faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
+import sal from 'sal.js'
+import { useEffect } from 'react';
+
 export default function Webdoc() {
+    useEffect(() => {
+        sal();
+    }, []);
+    
     return (
         <div className={styles.slide}>
             
