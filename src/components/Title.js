@@ -6,6 +6,8 @@ import { faThumbsUp, faCode, faPaintBrush, faDownload } from '@fortawesome/free-
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import sal from 'sal.js'
+
+import 'sal.js/dist/sal.css';
 import { useEffect } from 'react';
 
 export default function Title() {

@@ -8,16 +8,16 @@ import Webdoc from "../components/Webdoc"
 import Woodstack from "../components/Woodstack"
 
 
-// import sal from 'sal.js'
+import sal from 'sal.js'
 
 import { useEffect } from 'react';
 
 
 export default function Hello() {
     
-    // useEffect(() => {
-    //     sal();
-    // }, []);
+    useEffect(() => {
+        sal();
+    }, []);
 
     return (
         <div className={styles.container}>

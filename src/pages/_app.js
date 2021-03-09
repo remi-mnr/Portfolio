@@ -18,7 +18,9 @@ import { useEffect } from 'react';
 // import 'swiper/components/pagination/pagination.less';
 // import 'swiper/components/scrollbar/scrollbar.less';
 // import 'sal.js'
-import sal from 'sal.js';
+
+// import sal from 'sal.js';
+// import 'sal.js/src/sal.scss';
 
 function MyApp({ Component, pageProps }) {
 	// useEffect(() => {
