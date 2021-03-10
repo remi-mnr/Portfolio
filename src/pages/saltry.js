@@ -10,14 +10,32 @@ import Woodstack from "../components/Woodstack"
 
 import sal from 'sal.js'
 
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export default function Hello() {
     
+    const [size, setSize] = useState("")
     useEffect(() => {
         sal();
+
+        setSize(window.innerHeight + "px");
+
+        window.addEventListener('resize', () => {
+            console.log("Resize")
+            setSize(window.innerHeight + "px");
+            console.log(window.innerHeight)
+            // document.documentElement.style.setProperty('--vh', `${vh}px`);
+        })
     }, []);
+
+    let divStyle = {
+        width: "100%", 
+        height: size, 
+        overflow: "hidden", 
+        // position: "fixed", 
+        // zIndex: 999
+    };
 
     return (
         <div className={styles.container}>
@@ -30,14 +48,14 @@ export default function Hello() {
             </Head>
 
             <main>
-                <div style={{ width: "100%", height: "100vh", overflow: "hidden"}}>
-                    <Title />
+                <div style={divStyle}>
+                    <Woodstack />
                 </div>
                 <div style={{ width: "100%", height: "100vh", overflow: "hidden"}}>
                     <Webdoc />
                 </div>
                 <div style={{ width: "100%", height: "100vh", overflow: "hidden"}}>
-                    <Woodstack />
+                    <Title />
                 </div>
             </main>
         </div>

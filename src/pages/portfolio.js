@@ -15,12 +15,14 @@ import { useState, useEffect } from 'react';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Mousewheel, A11y]);
 export default function Hello() {
-    const [color, setColor] = useState("#2d2d2d")
     const colorList = [
-        "#fcb70c",
-        "#fa306e",
-        "#1486ff"
+        "#2d2d2d",
+        "#1AA762",
+        "#1486ff",
+        // "#fcb70c , 2d2d2d"
     ]
+    const [color, setColor] = useState(colorList[0])
+
     const updateColor = (swiper) => {
         console.log(swiper.activeIndex)
         setColor(colorList[swiper.activeIndex])
@@ -88,13 +90,13 @@ export default function Hello() {
 
                     
                     <SwiperSlide>
-                        <Title />
+                        <Title/>
                     </SwiperSlide>
                     <SwiperSlide>
                         <Woodstack />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Webdoc />
+                        <Webdoc/>
                     </SwiperSlide>
                 </Swiper>
             </main>

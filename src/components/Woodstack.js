@@ -16,21 +16,25 @@ export default function Webdoc() {
     return (
         <div className={styles.slide}>
             
-            <div className={styles.smallRound} />
-            <div className={styles.bigRound} />
+            <img className={styles.smallRound} src="/static/images/foret2.jpg" alt=""/>
+            <img className={styles.bigRound} src="/static/images/foret2.jpg" alt=""/>
 
             <img className={styles.pc} src="/static/images/foret_pc.png" alt=""/>
             <img className={styles.phone} src="/static/images/foret_phone.png" alt=""/>
 
 
             <div className={styles.infos}>
+
+                <img data-sal="slide-up" data-sal-delay="300"
+                src="/static/images/myforetLogo.png" alt=""/>
                 
-                <div className={styles.titleContainer}>
-                    <img data-sal="slide-up" data-sal-delay="300"
-                    src="/static/images/logoMy.png" alt=""/>
+                {/* <div className={styles.titleContainer}> */}
+                    {/* <img data-sal="slide-up" data-sal-delay="300"
+                    src="/static/images/logoMy.png" alt=""/> */}
+                    {/* <p data-sal="slide-up" data-sal-delay="200">MY-Forêt</p> */}
+
                     {/* <p data-sal="slide-up" data-sal-delay="200">Woodstack<sup>tool</sup></p> */}
-                    <p data-sal="slide-up" data-sal-delay="200">MY-Forêt</p>
-                </div>
+                {/* </div> */}
 
                 <div className={styles.dateContainer} data-sal="slide-up" data-sal-delay="500">
                     <FontAwesomeIcon icon={faCalendarCheck} /><p>2020 - 2021</p>
@@ -48,6 +52,9 @@ export default function Webdoc() {
                 </div>
 
                 <div data-sal="slide-right" data-sal-delay="900" className={styles.buttonContainer}>
+                    <a href="#" className={styles.github} title="Github">
+                        <FontAwesomeIcon icon={faGithub}/>
+                    </a>
                     <a target="_blank" href="http://webdoc.crewcore.fr/" className={styles.button} title="Les coulisses de sports extrêmes">
                         <p>Démo</p> <FontAwesomeIcon icon={faChevronRight} />
                     </a>

@@ -17,6 +17,12 @@ $mobile : 600px;
         justify-content: center;
         height: 100%;
         width: 28%;
+
+        img {
+            width: 100%;
+            padding: 0 10%;
+            margin-bottom: 5vh;
+        }
         @media (max-width: $tablet) {
             right: unset;
             left: 15%;
@@ -68,7 +74,7 @@ $mobile : 600px;
             margin-bottom: 17px;
             p {
                 font-size: 74px;
-                margin-left: 23px;
+                // margin-left: 23px;
                 font-size: 57px;
             }
             img {
@@ -76,13 +82,13 @@ $mobile : 600px;
             }
         }
         @media (max-width: $mobile) {
-            margin-bottom: 17px;
+            margin-bottom: 23px;
             p {
-                font-size: 65px;
-                margin-left: 0px;
+                font-size: 43px;
+                // margin-left: 0px;
             }
             img {
-                width: 75px;
+                width: 100px;
             }
         }
     }
@@ -142,6 +148,7 @@ $mobile : 600px;
     .buttonContainer {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
     .button {
         display: flex;
@@ -189,6 +196,41 @@ $mobile : 600px;
             }
         }
     }
+    .github {
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 11px;
+        border: 1px #cecece solid;
+        color: #b7b7b7;
+        background-color: white;
+        box-shadow: 0 1px 4px #0000001a;
+        transition: all .1s ease-in-out;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+        svg {
+            width: 32px;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+        @media(max-width: "1000px") {
+            width: 45px;
+            height: 45px;
+            svg {
+                width: 29px;
+            }
+        }
+        @media(max-width: "600px") {
+            width: 40px;
+            height: 40px;
+            svg {
+                width: 23px;
+            }
+        }
+    }
 
 
     .phone {
@@ -221,68 +263,113 @@ $mobile : 600px;
         }
     }
 
+    // .bigRound {
+    //     position: absolute;
+    //     border-radius: 100%;
+    //     background-color: #1AA762;
+    //     right: -1000px;
+    //     top: 0px;
+    //     bottom: 0px;
+    //     margin: auto;
+    //     width: 1500px;
+    //     height: 1500px;
+
+    //     background-image: url("/static/images/foret.jpg");
+    //     background-size: cover;
+        
+
+    //     @media (max-width: $medium) {
+    //         right: -1100px;
+    //     }
+    //     @media (max-width: $tablet) {
+    //         top: unset;
+    //         margin: unset;
+    //         // left: 0vh;
+    //         bottom: -1340px;
+
+    //         width: 900px;
+    //         height: 900px;
+    //         right: -643px;
+    //         bottom: -538px;
+    //     }
+    //     @media (max-width: $mobile) {
+    //         // width: 900px;
+    //         // height: 900px;
+    //         right: -760px;
+    //         bottom: -539px;
+    //     }
+    // }
+
+    // .smallRound {
+    //     position: absolute;
+    //     top: -250px;
+    //     left: -160px;
+    //     width: 500px;
+    //     height: 500px;
+    //     border-radius: 100%;
+    //     background-color: #FA306E;
+
+    //     background-image: url("/static/images/foret.jpg");
+    //     background-size: cover;
+
+    //     @media (max-width: $medium) {
+    //         // clip-path: circle(44% at 120% 16%);
+    //         top: -219px;
+    //         left: -262px;
+    //     }
+    //     @media (max-width: $tablet) {
+    //         // top: -330px;
+    //         top: -247px;
+    //         left: -291px;
+    //     }
+    //     @media (max-width: $mobile) {
+    //         top: -277px;
+    //         left: -390px;
+    //     }
+    // }
+
     .bigRound {
         position: absolute;
-        border-radius: 100%;
-        background-color: #1AA762;
-        right: -1000px;
-        top: 0px;
-        bottom: 0px;
-        margin: auto;
-        width: 1500px;
-        height: 1500px;
-
-        background-image: url("/static/images/foret.jpg");
-        background-size: cover;
+        // top: 0;
+        // bottom: 0;
+        right: 0vh; //-969px
+        width: auto;
+        height: 100vh;
+        // clip-path: circle(63% at 46% 50%);
+        clip-path: circle(88% at 122% 50%);
         
 
         @media (max-width: $medium) {
-            right: -1100px;
+            right: -160px;
         }
         @media (max-width: $tablet) {
-            top: unset;
-            margin: unset;
-            // left: 0vh;
-            bottom: -1340px;
-
-            width: 900px;
-            height: 900px;
-            right: -643px;
-            bottom: -538px;
+            right: -10vh;
+            bottom: -36vh;
+            clip-path: circle(94% at 168% 83%)
         }
         @media (max-width: $mobile) {
-            // width: 900px;
-            // height: 900px;
-            right: -760px;
-            bottom: -539px;
+            // left: -32vh;
+            // bottom: -61vh;
+            clip-path: circle(94% at 168% 83%)
         }
     }
 
     .smallRound {
         position: absolute;
-        top: -250px;
-        left: -160px;
-        width: 500px;
-        height: 500px;
-        border-radius: 100%;
-        background-color: #FA306E;
-
-        background-image: url("/static/images/foret.jpg");
-        background-size: cover;
-
+        top: -12vh;
+        left: -9vh; //-969px
+        width: auto;
+        height: 100vh;
+        clip-path: circle(44% at 100% 22%);
+        transform: scaleX(-1);
         @media (max-width: $medium) {
-            // clip-path: circle(44% at 120% 16%);
-            top: -219px;
-            left: -262px;
+            clip-path: circle(44% at 103% 17%);
         }
         @media (max-width: $tablet) {
-            // top: -330px;
-            top: -247px;
-            left: -291px;
+            clip-path: circle(40% at 115% 21%);
         }
         @media (max-width: $mobile) {
-            top: -277px;
-            left: -390px;
+            clip-path: circle(40% at 115% 21%);
         }
     }
 
@@ -315,7 +402,7 @@ $mobile : 600px;
             border-radius: 6px;
             // background-image: linear-gradient(to bottom, #30B4FF, #0167FF);
             // background-color: #FA306E;
-            background-color: #0f9d58;
+            background-color: hsl(96deg 56% 47%); //#0f9d58 hsl(89deg 59% 47%) hsl(96deg 56% 47%)
         }
         @media (max-width: $medium) {
             p {
