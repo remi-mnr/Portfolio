@@ -6,6 +6,7 @@ import styles from "../../styles/Hello.module.scss"
 import Title from "../components/Title"
 import Webdoc from "../components/Webdoc"
 import Woodstack from "../components/Woodstack"
+import IutInfo from "../components/IutInfo"
 
 
 // import sal from 'sal.js'
@@ -88,7 +89,6 @@ export default function Hello() {
                         </SwiperSlide>
                     )} */}
 
-                    
                     <SwiperSlide>
                         <Title/>
                     </SwiperSlide>
@@ -97,6 +97,9 @@ export default function Hello() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Webdoc/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <IutInfo />
                     </SwiperSlide>
                 </Swiper>
             </main>

@@ -5,13 +5,13 @@ import Head from 'next/head'
 import sal from 'sal.js'
 import { useEffect } from 'react';
 
-import 'sal.js/dist/sal.css'
+// import 'sal.js/dist/sal.css'
 
 export default function Blank() {
 
-    useEffect(() => {
-        sal();
-    }, []);
+    // useEffect(() => {
+    //     sal();
+    // }, []);
 
     return (
         <div>

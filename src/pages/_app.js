@@ -22,6 +22,9 @@ import { useEffect } from 'react';
 // import sal from 'sal.js';
 // import 'sal.js/src/sal.scss';
 
+import sal from 'sal.js'
+import 'sal.js/dist/sal.css';
+
 function MyApp({ Component, pageProps }) {
 	// useEffect(() => {
 		// console.log(window.innerHeight)
@@ -32,6 +35,16 @@ function MyApp({ Component, pageProps }) {
 	// 	});
 	// }, [])
 
+    useEffect(() => {
+		document.onreadystatechange = function () {
+			if (document.readyState == "complete") {
+			//   AOS.init();
+				console.log("hit")
+				
+				sal();
+			}
+		};
+    }, []);
 
 	return <Component {...pageProps} />
 }

@@ -8,7 +8,6 @@ import Webdoc from "../components/Webdoc"
 import Woodstack from "../components/Woodstack"
 
 
-import sal from 'sal.js'
 
 import { useState, useEffect } from 'react';
 
@@ -17,7 +16,6 @@ export default function Hello() {
     
     const [size, setSize] = useState("")
     useEffect(() => {
-        sal();
 
         setSize(window.innerHeight + "px");
 
@@ -48,6 +46,9 @@ export default function Hello() {
             </Head>
 
             <main>
+                <div style={{ width: "100%", height: "100vh", overflow: "hidden"}}>
+                    <Title />
+                </div>
                 <div style={divStyle}>
                     <Woodstack />
                 </div>
