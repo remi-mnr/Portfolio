@@ -36,14 +36,20 @@ function MyApp({ Component, pageProps }) {
 	// }, [])
 
     useEffect(() => {
+		let scrollAnimations;
 		document.onreadystatechange = function () {
 			if (document.readyState == "complete") {
 			//   AOS.init();
 				console.log("hit")
 				
-				sal();
+				scrollAnimations = sal();
 			}
 		};
+
+        return () => {
+            console.log("cleanup")
+            scrollAnimations.disable()
+        }
     }, []);
 
 	return <Component {...pageProps} />

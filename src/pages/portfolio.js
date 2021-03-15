@@ -20,6 +20,7 @@ export default function Hello() {
         "#2d2d2d",
         "#1AA762",
         "#1486ff",
+        "#7c4dff",
         // "#fcb70c , 2d2d2d"
     ]
     const [color, setColor] = useState(colorList[0])
