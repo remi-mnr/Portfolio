@@ -37,18 +37,23 @@ function MyApp({ Component, pageProps }) {
 
     useEffect(() => {
 		let scrollAnimations;
-		document.onreadystatechange = function () {
-			if (document.readyState == "complete") {
-			//   AOS.init();
-				console.log("hit")
+
+		scrollAnimations = sal();
+		scrollAnimations.update();
+		// document.onreadystatechange = function () {
+		// 	if (document.readyState == "complete") {
+		// 	//   AOS.init();
+		// 		console.log("hit")
 				
-				scrollAnimations = sal();
-			}
-		};
+		// 		scrollAnimations = sal();
+		// 		scrollAnimations.update()
+		// 	}
+		// };
 
         return () => {
             console.log("cleanup")
             scrollAnimations.disable()
+			scrollAnimations.reset();
         }
     }, []);
 
