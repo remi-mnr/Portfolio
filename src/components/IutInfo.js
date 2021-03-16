@@ -5,13 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faCalendarDay, faClock, faCalendarCheck, faAward } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons'
 
-// import sal from 'sal.js'
-import { useEffect } from 'react';
-
 export default function Webdoc() {
-    // useEffect(() => {
-    //     sal();
-    // }, []);
     
     return (
         <div className={styles.slide}>
@@ -25,12 +19,8 @@ export default function Webdoc() {
             <div className={styles.infos}>
                 
                 <div className={styles.titleContainer}>
-                    {/* <img data-sal="slide-up" data-sal-delay="300"
-                    src="/static/images/logoMy.png" alt=""/> */}
-                    <FontAwesomeIcon icon={faAward}/>
+                    <FontAwesomeIcon icon={faAward} data-sal="slide-up" data-sal-delay="600"/>
                     <p data-sal="slide-up" data-sal-delay="200">Portail des IUT Informatiques</p>
-
-                    {/* <p data-sal="slide-up" data-sal-delay="200">Woodstack<sup>tool</sup></p> */}
                 </div>
 
                 <div className={styles.dateContainer} data-sal="slide-up" data-sal-delay="500">
