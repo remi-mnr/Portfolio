@@ -1,13 +1,14 @@
 import styles from "../../styles/Title.module.scss"
-import sal from 'sal.js'
 import clsx from 'clsx';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faCode, faPaintBrush, faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
+import { useEffect } from 'react';
+
 export default function Title() {
-    sal();
+
     return (
         <div className={styles.slide}>
             
@@ -32,7 +33,7 @@ export default function Title() {
                     icon={faThumbsUp} 
                     className={styles.thumbs} 
                     data-sal="slide-up" 
-                    data-sal-delay="1000" data-sal-once/>
+                    data-sal-delay="1000" />
 
                     <p data-sal="slide-up" data-sal-delay="500"
                     className="swiper-no-swiping"
@@ -49,9 +50,11 @@ export default function Title() {
                     <a href="#" className={styles.button} title="Github">
                         <FontAwesomeIcon icon={faGithub}/>
                     </a>
+
                     {/* <a href="#" className={styles.button} title="Télécharger le Portfolio">
                         <FontAwesomeIcon icon={faDownload}/>
                     </a> */}
+
                     <a href="#" className={styles.button} title="Consulter mon CV">
                         <p>CV</p>
                     </a>

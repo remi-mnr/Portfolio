@@ -1,66 +1,93 @@
+import { Swiper, SwiperSlide  } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper';
 import Head from 'next/head'
-import styles from '../../styles/Home.module.css'
+import styles from "../../styles/Hello.module.scss"
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="robots" content="noindex"/>
-      </Head>
+import Title from "../components/Title"
+import Webdoc from "../components/Webdoc"
+import Woodstack from "../components/Woodstack"
+import IutInfo from "../components/IutInfo"
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+import { useState, useEffect } from 'react';
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+SwiperCore.use([Navigation, Pagination, Scrollbar, Mousewheel, A11y]);
+export default function Hello() {
+    const colorList = [
+        "#2d2d2d",
+        "#1AA762",
+        "#1486ff",
+        "#a262e2", //7c4dff
+        // "#fcb70c , 2d2d2d"
+    ]
+    const [color, setColor] = useState(colorList[0])
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+    const updateColor = (swiper) => {
+        console.log(swiper.activeIndex)
+        setColor(colorList[swiper.activeIndex])
+    }
+    
+    // useEffect(() => {
+    //     const swiper = document.querySelector('.swiper-container').swiper;
+    //     console.log(swiper.realIndex)
+        // swiper.slideNext();
+    //     const interval = setInterval(() => {
+    //       setColor("#"+Math.floor(1000 + Math.random() * 900000))
+    //     }, 1000);
+    //     return () => clearInterval(interval);
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        // let vh = window.innerHeight * 0.01;
+        // document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+        // window.addEventListener('resize', () => {
+        //     console.log("Resize")
+        //     let vh = window.innerHeight * 0.01;
+        //     console.log(vh)
+        //     document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // })
+    // }, []);
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    // console.log(swiper.activeIndex)
+
+    // sal({
+    //     // threshold: 1,
+    //     once: true
+    // });
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>Create Next App</title>
+                <link rel="icon" href="/favicon.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Mon portfolio et mes projets de développement" />
+                <meta name="theme-color" content={color}/>
+                <meta name="robots" content="noindex"/>
+            </Head>
+
+            <main>
+                <Swiper
+                // spaceBetween={50}
+                // slidesPerView={1}
+                // navigation
+                mousewheel
+                direction="vertical"
+                pagination={{ clickable: true }}
+                // scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={(swiper) => updateColor(swiper)}
+                centeredSlides
+                // grabCursor
+                // simulateTouch={false}
+                className={styles.swiper}
+                >
+                    {[ <Title />,<Woodstack />,<Webdoc />, <IutInfo />].map((component, index) => 
+                        <SwiperSlide key={index}>
+                            {component}
+                        </SwiperSlide>
+                    )}
+                </Swiper>
+            </main>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        
+    )
 }

@@ -11,49 +11,99 @@ $mobile : 600px;
 
     .infos {
         position: absolute;
-        right: 17%;
-        // top: 0;
-        // bottom: 0;
-        // margin: auto;
-        // height: fit-content;
+        left: 11%;
         display: flex;
         flex-flow: column;
         justify-content: center;
         height: 100%;
-
         width: 28%;
+
         img {
             width: 100%;
-            margin-bottom: 60px;
-            height: auto;
+            padding: 0 10%;
+            margin-bottom: 5vh;
+        }
+        @media (max-width: $medium) {
+            left: 8%;
+            width: 35%;
         }
         @media (max-width: $tablet) {
             right: unset;
             left: 15%;
             width: 68%;
-            img {
-                margin-bottom: 44px;
-                padding: 0 14%;
-            }
-            @media only screen and (orientation: landscape) and (max-height: "500px") {
-                img {
-                    margin-bottom: 0px !important;
-                    padding: 0 30% !important;
-                }
-            }
         }
         @media (max-width: $mobile) {
             left: 7%;
             width: 82%;
-            img {
-                margin-bottom: 44px;
-                padding: 0 3%;
+        }
+    }
+
+    .titleContainer {
+        display: flex;
+        // align-content: center;
+        position: relative;
+        align-items: center;
+        flex-flow: column;
+        width: 100%;
+        height: auto;
+        margin-bottom: 41px;
+        p {
+            font-family: 'Source Sans Pro';
+            font-weight: 900;
+            font-size: 68px;
+            color: #2e2e2e;
+        }
+        svg {
+            position: absolute;
+            top: 13px;
+            left: -58px;
+            height: 44px;
+            color: #6200ff4a;
+        }
+        @media (max-width: $medium) {
+            margin-bottom: 17px;
+            p {
+                font-size: 57px;
             }
-            // @media only screen and (orientation: landscape) {
-            //     img {
-            //         display: none;
-            //     }
-            // }
+            svg {
+                top: 13px;
+                left: -39px;
+                height: 32px;
+            }
+        }
+        @media (max-width: "1100px") {
+            p {
+                font-size: 53px;
+            }
+            svg {
+                top: 11px;
+                left: -45px;
+                height: 35px;
+            }
+        }
+        @media (max-width: $tablet) {
+            // flex-flow: row;
+            // justify-content: center;
+            margin-bottom: 17px;
+            p {
+                font-size: 74px;
+                // margin-left: 23px;
+                font-size: 57px;
+            }
+        }
+        @media (max-width: $mobile) {
+            margin-bottom: 23px;
+            p {
+                font-size: 43px;
+                // margin-left: 0px;
+            }
+            svg {
+                top: -38px;
+                left: -2px;
+                height: 35px;
+                z-index: 999;
+                color: #a900ff4a;
+            }
         }
     }
 
@@ -112,6 +162,7 @@ $mobile : 600px;
     .buttonContainer {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
     .button {
         display: flex;
@@ -159,6 +210,41 @@ $mobile : 600px;
             }
         }
     }
+    .github {
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 11px;
+        border: 1px #cecece solid;
+        color: #b7b7b7;
+        background-color: white;
+        box-shadow: 0 1px 4px #0000001a;
+        transition: all .1s ease-in-out;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+        svg {
+            width: 32px;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+        @media(max-width: "1000px") {
+            width: 45px;
+            height: 45px;
+            svg {
+                width: 29px;
+            }
+        }
+        @media(max-width: "600px") {
+            width: 40px;
+            height: 40px;
+            svg {
+                width: 23px;
+            }
+        }
+    }
 
 
     .phone {
@@ -166,12 +252,16 @@ $mobile : 600px;
         width: 10%;
         bottom: 0;
         top: 0;
-        left: 39%;
+        right: 43%;
         /* margin-top: 47px; */
         padding-top: 13%;
         margin: auto;
         animation: floatAnimation 5s ease-in-out infinite;
         // filter: drop-shadow(0px 12px 18px #00000079);
+        
+        @media (max-width: $medium) {
+            right: 41%;
+        }
         @media (max-width: $tablet) {
             display: none;
         }
@@ -182,58 +272,86 @@ $mobile : 600px;
         width: 44%;
         bottom: 0;
         top: 0;
-        left: 4%;
+        right: 8%;
         margin: auto;
         animation: floatAnimation 5s ease-in-out infinite -0.5s;
         // filter: drop-shadow(0px 1px 11px #0000008f);
+        @media (max-width: $medium) {
+            right: 6%;
+        }
         @media (max-width: $tablet) {
             display: none;
         }
     }
 
-    .bigRound {
+    .backgroundIut {
         position: absolute;
-        // top: 0;
-        // bottom: 0;
-        left: 0vh; //-969px
+        top: 0;
+        right: -120px;
         width: auto;
-        height: 100vh;
-        // clip-path: circle(63% at 46% 50%);
-        clip-path: circle(88% at -22% 50%);
+        height: 99%;
+        opacity: 0.5;
+        @media (max-width: $medium) {
+            top: -56px;
+            right: -126px;
+            width: auto;
+            height: 85%;
+        }
+        @media (max-width: $mobile) {
+            top: -170px;
+            // top: -136px;
+            right: -189px;
+
+            // top: -200px;
+            // right: -190px;
+            // width: auto;
+            // height: 86%;
+        }
+    }
+    // .bigRound {
+    //     position: absolute;
+    //     // top: 0;
+    //     // bottom: 0;
+    //     right: 0vh; //-969px
+    //     width: auto;
+    //     height: 100vh;
+    //     // clip-path: circle(63% at 46% 50%);
+    //     clip-path: circle(88% at 122% 50%);
         
 
-        @media (max-width: $medium) {
-            left: -160px;
-        }
-        @media (max-width: $tablet) {
-            left: -32vh;
-            bottom: -61vh;
-            clip-path: circle(94% at -28% 61%);
-        }
-        @media (max-width: $mobile) {
-            left: -32vh;
-            bottom: -61vh;
-            clip-path: circle(94% at -28% 61%);
-        }
-    }
+    //     @media (max-width: $medium) {
+    //         right: -160px;
+    //     }
+    //     @media (max-width: $tablet) {
+    //         right: -10vh;
+    //         bottom: -36vh;
+    //         clip-path: circle(94% at 168% 83%)
+    //     }
+    //     @media (max-width: $mobile) {
+    //         // left: -32vh;
+    //         // bottom: -61vh;
+    //         clip-path: circle(94% at 168% 83%)
+    //     }
+    // }
 
-    .smallRound {
-        position: absolute;
-        top: -12vh;
-        right: 0; //-969px
-        width: auto;
-        height: 100vh;
-        clip-path: circle(44% at 115% 22%);
-        @media (max-width: $medium) {
-            clip-path: circle(44% at 120% 16%);
-        }
-        @media (max-width: $tablet) {
-            clip-path: circle(40% at 132% 21%);
-        }
-        @media (max-width: $mobile) {
-            clip-path: circle(40% at 132% 21%);
-        }
-    }
+    // .smallRound {
+    //     position: absolute;
+    //     top: -12vh;
+    //     left: -9vh; //-969px
+    //     width: auto;
+    //     height: 100vh;
+    //     clip-path: circle(44% at 100% 22%);
+    //     transform: scaleX(-1);
+    //     @media (max-width: $medium) {
+    //         clip-path: circle(44% at 103% 17%);
+    //     }
+    //     @media (max-width: $tablet) {
+    //         clip-path: circle(40% at 115% 21%);
+    //     }
+    //     @media (max-width: $mobile) {
+    //         clip-path: circle(40% at 115% 21%);
+    //     }
+    // }
 
     @keyframes floatAnimation {
         0% { transform: translatey(0px); }
@@ -262,8 +380,8 @@ $mobile : 600px;
             
             padding: 7px 9px;
             border-radius: 6px;
-            background-color: #188dff;
-            // background-image: linear-gradient(to bottom, #30B4FF, #0167FF);
+            background-color: #a262e2;
+            // background-image: linear-gradient(to right, #06DFE0, #00EE8D);
         }
         @media (max-width: $medium) {
             p {

@@ -151,6 +151,9 @@
             left: 24px;
             top: -346px;
         }
+        @media(max-width: "500px") {
+            top: -397px;
+        }
         @include gridv2
     }
 
@@ -165,6 +168,10 @@
         @media(max-width: "1000px") {
             right: 0px;
             width: 338px;
+        }
+        @media(max-width: "500px") {
+            right: -203px;
+            bottom: 1px;
         }
     }
 
@@ -388,6 +395,7 @@
         margin-top: 32px;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         @media(max-width: "1000px") {
             margin-top: 18px;
         }
