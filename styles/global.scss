@@ -12,8 +12,8 @@
 @import 'swiper/components/pagination/pagination.scss';
 @import 'swiper/components/scrollbar/scrollbar.scss';
 
-
 @import './pagination.scss';
+@import 'sal.js/src/sal.scss';
 
 $primary-gradient: linear-gradient(#FFCC01, #F89221);
 $secondary-gradient: linear-gradient(#30B4FF, #0167FF);
@@ -75,5 +75,3 @@ a {
     box-sizing: border-box;
 }
 
-
-// @import 'sal.js/dist/sal.css';

@@ -45,20 +45,20 @@ export default function Title() {
                 <p data-sal="slide-down" data-sal-delay="500"
                 className={clsx(styles.subtitle, "swiper-no-swiping")}>Lorem ipsum dolor sit amet, consectetur adipiscing elitam venenatis sit .</p>
                 
-                {/* <div data-sal="slide-up" data-sal-delay="700" 
+                <div data-sal="slide-up" data-sal-delay="700" 
                 className={styles.buttonsContainer}>
                     <a href="#" className={styles.button} title="Github">
                         <FontAwesomeIcon icon={faGithub}/>
                     </a>
 
-                    // <a href="#" className={styles.button} title="Télécharger le Portfolio">
-                    //     <FontAwesomeIcon icon={faDownload}/>
-                    // </a>
+                    {/* <a href="#" className={styles.button} title="Télécharger le Portfolio">
+                        <FontAwesomeIcon icon={faDownload}/>
+                    </a> */}
 
                     <a href="#" className={styles.button} title="Consulter mon CV">
                         <p>CV</p>
                     </a>
-                </div> */}
+                </div>
             </div>
             
         </div>

@@ -20,7 +20,7 @@ export default function Hello() {
         "#2d2d2d",
         "#1AA762",
         "#1486ff",
-        "#7c4dff",
+        "#a262e2", //7c4dff
         // "#fcb70c , 2d2d2d"
     ]
     const [color, setColor] = useState(colorList[0])
@@ -79,7 +79,6 @@ export default function Hello() {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={(swiper) => updateColor(swiper)}
                 centeredSlides
-                // grabCursor
                 // simulateTouch={false}
                 className={styles.swiper}
                 >

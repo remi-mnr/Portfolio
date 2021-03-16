@@ -41,7 +41,8 @@ export default function Webdoc() {
                 </div>
 
                 <p data-sal="slide-down" data-sal-delay="400"
-                className={clsx(styles.subtitle, "swiper-no-swiping")}>Ce site est un <b>Web-Documentaire</b> sur les coulisses des sports extrêmes. Il propose une <b>intégration continue</b> et se veut hautement interactif.</p>
+                className={clsx(styles.subtitle, "swiper-no-swiping")}>Réalisation d’une application permettant de gérer les <b>stocks</b> de bois, de gérer les <b>chantiers</b>, et de générer des devis et factures en <b>PDF</b>.</p>
+                {/* dev continue, PWA, phone */}
 
                 <div className={styles.tagContainer} data-sal="slide-down" data-sal-delay="600">
                     <p>React JS</p>
@@ -55,7 +56,7 @@ export default function Webdoc() {
                     <a href="#" className={styles.github} title="Github">
                         <FontAwesomeIcon icon={faGithub}/>
                     </a>
-                    <a target="_blank" href="http://webdoc.crewcore.fr/" className={styles.button} title="Les coulisses de sports extrêmes">
+                    <a target="_blank" href="#" className={styles.button} title="Les coulisses de sports extrêmes">
                         <p>Démo</p> <FontAwesomeIcon icon={faChevronRight} />
                     </a>
                 </div>

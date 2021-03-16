@@ -26,36 +26,11 @@ import sal from 'sal.js'
 import 'sal.js/dist/sal.css';
 
 function MyApp({ Component, pageProps }) {
-	// useEffect(() => {
-		// console.log(window.innerHeight)
-
-		
-	// 	sal({
-	// 		once: false
-	// 	});
-	// }, [])
-
-    useEffect(() => {
-		let scrollAnimations;
-
-		scrollAnimations = sal();
-		scrollAnimations.update();
-		// document.onreadystatechange = function () {
-		// 	if (document.readyState == "complete") {
-		// 	//   AOS.init();
-		// 		console.log("hit")
-				
-		// 		scrollAnimations = sal();
-		// 		scrollAnimations.update()
-		// 	}
-		// };
-
-        return () => {
-            console.log("cleanup")
-            scrollAnimations.disable()
-			scrollAnimations.reset();
-        }
-    }, []);
+	useEffect(() => {
+		sal({
+			once: false
+		});
+	}, [])
 
 	return <Component {...pageProps} />
 }

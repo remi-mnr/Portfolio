@@ -262,7 +262,8 @@ $mobile : 600px;
             
             padding: 7px 9px;
             border-radius: 6px;
-            background-image: linear-gradient(to bottom, #30B4FF, #0167FF);
+            background-color: #188dff;
+            // background-image: linear-gradient(to bottom, #30B4FF, #0167FF);
         }
         @media (max-width: $medium) {
             p {
