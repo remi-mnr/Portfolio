@@ -53,10 +53,10 @@ export default function Webdoc() {
                 </div>
 
                 <div data-sal="slide-right" data-sal-delay="900" className={styles.buttonContainer}>
-                    <a href="#" className={styles.github} title="Github">
+                    <a target="_blank" href="https://github.com/remi-mnr/My-Foret" className={styles.github} title="Github">
                         <FontAwesomeIcon icon={faGithub}/>
                     </a>
-                    <a target="_blank" href="#" className={styles.button} title="Les coulisses de sports extrêmes">
+                    <a target="_blank" href="https://my-foret-demo.netlify.app/" className={styles.button} title="Les coulisses de sports extrêmes">
                         <p>Démo</p> <FontAwesomeIcon icon={faChevronRight} />
                     </a>
                 </div>

@@ -43,11 +43,11 @@ export default function Title() {
                     Portfolio
                 </h1>
                 <p data-sal="slide-down" data-sal-delay="500"
-                className={clsx(styles.subtitle, "swiper-no-swiping")}>Lorem ipsum dolor sit amet, consectetur adipiscing elitam venenatis sit .</p>
+                className={clsx(styles.subtitle, "swiper-no-swiping")}>Développeur Web & Mobile</p>
                 
                 <div data-sal="slide-up" data-sal-delay="700" 
                 className={styles.buttonsContainer}>
-                    <a href="#" className={styles.button} title="Github">
+                    <a href="https://github.com/remi-mnr" target="_blank" className={styles.button} title="Github">
                         <FontAwesomeIcon icon={faGithub}/>
                     </a>
 
@@ -55,7 +55,7 @@ export default function Title() {
                         <FontAwesomeIcon icon={faDownload}/>
                     </a> */}
 
-                    <a href="#" className={styles.button} title="Consulter mon CV">
+                    <a href="/static/CV Rémi Ménor.pdf" target="_blank" className={styles.button} title="Consulter mon CV">
                         <p>CV</p>
                     </a>
                 </div>

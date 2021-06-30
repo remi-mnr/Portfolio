@@ -39,14 +39,14 @@ export default function Webdoc() {
                     <p>Ajax</p>
                 </div>
 
-                <div data-sal="slide-right" data-sal-delay="900" className={styles.buttonContainer}>
+                {/* <div data-sal="slide-right" data-sal-delay="900" className={styles.buttonContainer}>
                     <a href="#" className={styles.github} title="Github">
                         <FontAwesomeIcon icon={faGitlab}/>
                     </a>
-                    {/* <a target="_blank" href="http://webdoc.crewcore.fr/" className={styles.button} title="Les coulisses de sports extrêmes">
+                    <a target="_blank" href="http://webdoc.crewcore.fr/" className={styles.button} title="Les coulisses de sports extrêmes">
                         <p>Démo</p> <FontAwesomeIcon icon={faChevronRight} />
-                    </a> */}
-                </div>
+                    </a>
+                </div> */}
 
             </div>
 
